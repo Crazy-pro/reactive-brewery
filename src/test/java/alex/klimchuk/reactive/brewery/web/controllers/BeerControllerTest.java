@@ -39,6 +39,7 @@ public class BeerControllerTest {
     @BeforeEach
     public void setUp() {
         validBeer = BeerDto.builder()
+                .id(1)
                 .beerName("Test beer")
                 .beerStyle("PALE_ALE")
                 .upc(BeerLoader.BEER_1_UPC)

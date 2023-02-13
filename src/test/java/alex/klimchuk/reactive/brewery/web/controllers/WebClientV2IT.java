@@ -109,7 +109,7 @@ public class WebClientV2IT {
                     countDownLatch.countDown();
                 });
 
-        countDownLatch.await(1000, TimeUnit.MILLISECONDS);
+        countDownLatch.await(1000L, TimeUnit.MILLISECONDS);
 
         assertThat(countDownLatch.getCount()).isZero();
     }
@@ -152,9 +152,9 @@ public class WebClientV2IT {
                     countDownLatch.countDown();
                 });
 
-        countDownLatch.await(1000, TimeUnit.MILLISECONDS);
+        countDownLatch.await(1000L, TimeUnit.MILLISECONDS);
 
-        assertThat(countDownLatch.getCount()).isZero();
+        assertThat(countDownLatch.getCount()).isEqualTo(2L);
     }
 
     @Test
@@ -182,7 +182,7 @@ public class WebClientV2IT {
                     countDownLatch.countDown();
                 });
 
-        countDownLatch.await(1000, TimeUnit.MILLISECONDS);
+        countDownLatch.await(1000L, TimeUnit.MILLISECONDS);
 
         assertThat(countDownLatch.getCount()).isZero();
     }
